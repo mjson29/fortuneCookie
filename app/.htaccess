@@ -1,0 +1,7 @@
+SetEnv session.use_cookies='0';	
+AddDefaultCharset UTF-8
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond $1 !^(index\.php|assets|images|css|js|robots\.txt)
+RewriteRule .* index.php/$0 [PT,L]
